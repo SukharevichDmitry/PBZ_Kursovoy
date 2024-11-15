@@ -17,8 +17,8 @@ public class PassengerMapper {
     }
 
     // Преобразование из Passenger в PassengerResponseDTO (для ответа)
-    public PassengerResponseDTO toResponseDTO(Passenger Passenger) {
-        return modelMapper.map(Passenger, PassengerResponseDTO.class);
+    public PassengerResponseDTO toResponseDTO(Passenger passenger) {
+        return modelMapper.map(passenger, PassengerResponseDTO.class);
     }
 
 }
