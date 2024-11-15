@@ -3,7 +3,7 @@ package org.example.service;
 import org.example.dto.PassengerRequestDTO;
 import org.example.dto.PassengerResponseDTO;
 import org.example.entity.Passenger;
-import org.example.exception.InvalidPassengerException;
+import org.example.exception.InvalidException;
 import org.example.exception.PassengerNotFoundException;
 import org.example.mapper.PassengerMapper;
 import org.example.repository.PassengerRepository;
@@ -55,7 +55,7 @@ public class PassengerService {
     public PassengerResponseDTO createPassenger (PassengerRequestDTO passengerRequestDTO) {
             Optional<Passenger> existingPassenger = passengerRepository.findByPassportNumber(passengerRequestDTO.getPassportNumber());
             if (existingPassenger.isPresent()) {
-                throw new InvalidPassengerException("Passenger with that passport number already exists.");
+                throw new InvalidException("Passenger with that passport number already exists.");
             }
 
             Passenger passenger = passengerMapper.toEntity(passengerRequestDTO);
@@ -71,7 +71,7 @@ public class PassengerService {
 
         Optional<Passenger> existingPassenger = passengerRepository.findByPassportNumber(passengerDetails.getPassportNumber());
         if (existingPassenger.isPresent() && !existingPassenger.get().getId().equals(id)) {
-            throw new InvalidPassengerException("Passenger with that passport number already exists.");
+            throw new InvalidException("Passenger with that passport number already exists.");
         }
 
         passenger.setFullName(passengerDetails.getFullName());

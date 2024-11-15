@@ -4,7 +4,7 @@ import org.example.dto.FlightRequestDTO;
 import org.example.dto.FlightResponseDTO;
 import org.example.entity.Flight;
 import org.example.exception.FlightNotFoundException;
-import org.example.exception.InvalidPassengerException;
+import org.example.exception.InvalidException;
 import org.example.mapper.FlightMapper;
 import org.example.repository.FlightRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +51,7 @@ public class FlightService {
     public FlightResponseDTO createFlight(FlightRequestDTO flightRequestDTO) {
         Optional<Flight> existingFlight = flightRepository.findByRaceNumber(flightRequestDTO.getRaceNumber());
         if (existingFlight.isPresent()) {
-            throw new InvalidPassengerException("Flight with that race number already exists.");
+            throw new InvalidException("Flight with that race number already exists.");
         }
 
         Flight flight = flightMapper.toEntity(flightRequestDTO);
@@ -65,7 +65,7 @@ public class FlightService {
 
         Optional<Flight> existingFlight = flightRepository.findByRaceNumber(flightDetails.getRaceNumber());
         if (existingFlight.isPresent() && !existingFlight.get().getId().equals(id)) {
-            throw new InvalidPassengerException("Flight with that race number already exists.");
+            throw new InvalidException("Flight with that race number already exists.");
         }
 
         flight.setRaceNumber(flightDetails.getRaceNumber());
