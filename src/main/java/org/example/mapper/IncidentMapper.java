@@ -17,6 +17,6 @@ public class IncidentMapper {
     }
 
     public IncidentResponseDTO toResponseDTO(Incident incident) {
-        return modelMapper.map(incident, FlightResponseDTO.class);
+        return modelMapper.map(incident, IncidentResponseDTO.class);
     }
 }

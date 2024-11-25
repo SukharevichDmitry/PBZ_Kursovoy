@@ -49,10 +49,10 @@ public class FlightService {
     }
 
     public FlightResponseDTO createFlight(FlightRequestDTO flightRequestDTO) {
-        Optional<Flight> existingFlight = flightRepository.findByRaceNumber(flightRequestDTO.getRaceNumber());
-        if (existingFlight.isPresent()) {
-            throw new InvalidException("Flight with that race number already exists.");
-        }
+//        Optional<Flight> existingFlight = flightRepository.findByRaceNumber(flightRequestDTO.getRaceNumber());
+//        if (existingFlight.isPresent()) {
+//            throw new InvalidException("Flight with that race number already exists.");
+//        }
 
         Flight flight = flightMapper.toEntity(flightRequestDTO);
         flightRepository.save(flight);
