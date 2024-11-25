@@ -18,8 +18,8 @@ public class Passenger {
     private Long id;
 
     private String fullName;
-    private Long passportNumber;
-    private LocalDate birthDate;
+    private String passportNumber;
+    private String birthDate;
     private String gender;
     private String contactInfo;
 }

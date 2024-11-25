@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/passengers")
+@RequestMapping("/passenger")
 public class PassengerController {
 
     @Autowired
@@ -24,7 +24,7 @@ public class PassengerController {
     }
 
     @GetMapping("/passport/{passportNumber}")
-    public ResponseEntity<PassengerResponseDTO> getPassengerByPassportNumber(@PathVariable Long passportNumber) {
+    public ResponseEntity<PassengerResponseDTO> getPassengerByPassportNumber(@PathVariable String passportNumber) {
         return passengerService.getPassengerByPassportNumber(passportNumber)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());

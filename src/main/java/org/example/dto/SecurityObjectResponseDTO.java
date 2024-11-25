@@ -15,5 +15,5 @@ public class SecurityObjectResponseDTO {
     private String name;
     private String type;
     private String description;
-    private short accessLevel;
+    private String accessLevel;
 }

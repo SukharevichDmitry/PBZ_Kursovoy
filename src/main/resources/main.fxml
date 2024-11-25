@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" spacing="10" alignment="CENTER">
-    <Button text="Click me!">
-        <onAction>#onButtonClick</onAction>
-    </Button>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.control.TextArea?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.MainController">
+    <!-- Верхняя панель с кнопками -->
+    <HBox spacing="10" style="-fx-padding: 10; -fx-background-color: lightgray;">
+        <Button fx:id="flightButton" text="Flight" onAction="#onFlightClick" />
+        <Button fx:id="passengerButton" text="Passenger" onAction="#onPassengerClick" />
+        <Button fx:id="incidentButton" text="Incident" onAction="#onIncidentClick" />
+        <Button fx:id="sobjectButton" text="SObject" onAction="#onSObjectClick" />
+        <Button fx:id="sstaffButton" text="SStaff" onAction="#onSStaffClick" />
+    </HBox>
+
+    <!-- Основное содержимое -->
+    <StackPane fx:id="contentPane" style="-fx-padding: 10;">
+        <Label fx:id="label" text="Привет, мир!" />
+    </StackPane>
+    <TextArea fx:id="outputArea" editable="false" prefHeight="150" wrapText="true"/>
 </VBox>

@@ -17,10 +17,10 @@ public class Incident {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDate incidentDate;
-    private Long incidentPlaceId;
+    private String incidentDate;
+    private String incidentPlaceId;
     private String description;
-    private Long passengerId;
-    private Long staffId;
+    private String passengerId;
+    private String staffId;
     private String measuresTaken;
 }

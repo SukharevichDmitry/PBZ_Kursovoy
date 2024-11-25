@@ -17,10 +17,10 @@ public class Flight {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long raceNumber;
+    private String raceNumber;
     private String departurePoint;
     private String arrivalPoint;
-    private LocalDate departureDate;
-    private LocalDate arrivalDate;
+    private String departureDate;
+    private String arrivalDate;
     private String aviaCompany;
 }

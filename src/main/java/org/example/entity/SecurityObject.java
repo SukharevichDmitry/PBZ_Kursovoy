@@ -18,5 +18,5 @@ public class SecurityObject {
     private String name;
     private String type;
     private String description;
-    private short accessLevel;
+    private String accessLevel;
 }

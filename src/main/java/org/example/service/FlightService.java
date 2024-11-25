@@ -49,10 +49,6 @@ public class FlightService {
     }
 
     public FlightResponseDTO createFlight(FlightRequestDTO flightRequestDTO) {
-//        Optional<Flight> existingFlight = flightRepository.findByRaceNumber(flightRequestDTO.getRaceNumber());
-//        if (existingFlight.isPresent()) {
-//            throw new InvalidException("Flight with that race number already exists.");
-//        }
 
         Flight flight = flightMapper.toEntity(flightRequestDTO);
         flightRepository.save(flight);
@@ -62,11 +58,6 @@ public class FlightService {
     public FlightResponseDTO updateFlight(Long id, FlightRequestDTO flightDetails) {
         Flight flight = flightRepository.findById(id)
                 .orElseThrow(() -> new FlightNotFoundException(id));
-
-        Optional<Flight> existingFlight = flightRepository.findByRaceNumber(flightDetails.getRaceNumber());
-        if (existingFlight.isPresent() && !existingFlight.get().getId().equals(id)) {
-            throw new InvalidException("Flight with that race number already exists.");
-        }
 
         flight.setRaceNumber(flightDetails.getRaceNumber());
         flight.setDeparturePoint(flightDetails.getDeparturePoint());

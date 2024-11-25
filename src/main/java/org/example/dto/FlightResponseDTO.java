@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDate;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,10 +14,10 @@ public class FlightResponseDTO {
 
     private Long id;
 
-    private Long raceNumber;
+    private String raceNumber;
     private String departurePoint;
     private String arrivalPoint;
-    private LocalDate departureDate;
-    private LocalDate arrivalDate;
+    private String departureDate;
+    private String arrivalDate;
     private String aviaCompany;
 }

@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface FlightRepository extends JpaRepository<Flight, Long> {
-    Optional<Flight> findByRaceNumber(Long raceNumber);
+    Optional<Flight> findByRaceNumber(String raceNumber);
 }

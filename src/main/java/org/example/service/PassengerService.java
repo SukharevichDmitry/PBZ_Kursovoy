@@ -28,7 +28,7 @@ public class PassengerService {
                 .orElseThrow(() -> new PassengerNotFoundException(id)));
     }
 
-    public Optional<PassengerResponseDTO> getPassengerByPassportNumber(Long passportNumber) {
+    public Optional<PassengerResponseDTO> getPassengerByPassportNumber(String passportNumber) {
         return passengerRepository.findByPassportNumber(passportNumber)
                 .map(passengerMapper::toResponseDTO);
     }
