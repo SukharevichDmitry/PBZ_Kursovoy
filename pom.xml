@@ -17,7 +17,13 @@
     <lombok.version>1.18.28</lombok.version>
     <junit.version>3.8.1</junit.version>
     <modelmapper.version>2.4.4</modelmapper.version>
-    <javafx.version>21.0.5</javafx.version> <!-- Обновлено на последнюю версию JavaFX -->
+    <javafx.version>21.0.5</javafx.version>
+
+    <product.company>SukharevichDmitry</product.company>
+    <product.title>AirportApp</product.title>
+    <exeFileName>AirportApp</exeFileName>
+    <jdkVersion>17</jdkVersion>
+    <project.artifactId>PBZ_Kursovoy</project.artifactId>
   </properties>
 
   <dependencies>
@@ -89,14 +95,79 @@
           <mainClass>org.example.AppLauncher</mainClass>
           <arguments>
             <argument>--module-path</argument>
-            <argument>C:\Users\37529\Downloads\openjfx-21.0.5_windows-x64_bin-sdk/lib</argument>
+            <argument>C:\Users\37529\Downloads\openjfx-21.0.5_windows-x64_bin-sdk\javafx-sdk-21.0.5\lib</argument>
             <argument>--add-modules</argument>
             <argument>javafx.controls,javafx.fxml</argument>
           </arguments>
         </configuration>
       </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>3.3.0</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>org.example.AppLauncher</mainClass>
+            </manifest>
+          </archive>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>com.akathist.maven.plugins.launch4j</groupId>
+        <artifactId>launch4j-maven-plugin</artifactId>
+        <version>2.4.1</version>
+        <executions>
+          <execution>
+            <id>plugin-loader</id>
+            <phase>package</phase>
+            <goals>
+              <goal>launch4j</goal>
+            </goals>
+            <configuration>
+              <headerType>gui</headerType>
+              <outfile>${exeFileName}.exe</outfile>
+              <jar>${project.build.directory}/${project.artifactId}-1.0-SNAPSHOT-jar-with-dependencies.jar</jar>
+              <errTitle>${product.title}</errTitle>
+              <icon>src/main/resources/icon.ico</icon>
+              <classPath>
+                <mainClass>org.example.AppLauncher</mainClass>
+                <addDependencies>
+                  true
+                </addDependencies>
+              </classPath>
+              <jre>
+                <minVersion>${jdkVersion}</minVersion>
+                <path>C:/Program Files/Java/jdk-17</path> <!-- Укажите путь к вашему JDK -->
+              </jre>
+              <versionInfo>
+                <fileVersion>1.0.0.0</fileVersion>
+                <txtFileVersion>1.0.0.0</txtFileVersion>
+                <productVersion>1.0.0.0</productVersion>
+                <txtProductVersion>1.0.0.0</txtProductVersion>
+                <companyName>${product.company}</companyName>
+                <productName>${product.title}</productName>
+                <internalName>${exeFileName}</internalName>
+                <originalFilename>${exeFileName}.exe</originalFilename>
+              </versionInfo>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
-
-
 </project>

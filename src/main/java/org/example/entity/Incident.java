@@ -18,9 +18,9 @@ public class Incident {
     private Long id;
 
     private String incidentDate;
-    private String incidentPlaceId;
+    private String incidentPlaceNum;
     private String description;
-    private String passengerId;
-    private String staffId;
+    private String passengerNum;
+    private String staffNum;
     private String measuresTaken;
 }

@@ -1,0 +1,91 @@
+
+
+Version:	3.50
+CmdLine:	C:\Users\37529\IdeaProjects\PBZ_Kursovoy\AirportApp.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.017.000
+Java max ver:	
+JRE paths:	C:\Program Files\Java\jdk-17
+Check launcher:	C:\Program Files\Java\jdk-17\bin\javaw.exe (OK)
+Version string: 1.017.000_012 / 64-Bit (OK)
+Main class:	org.example.AppLauncher
+Add classpath:	spring-boot-starter-data-jpa-3.1.0.jar
+Add classpath:	spring-boot-starter-aop-3.1.0.jar
+Add classpath:	spring-aop-6.0.9.jar
+Add classpath:	aspectjweaver-1.9.19.jar
+Add classpath:	spring-boot-starter-jdbc-3.1.0.jar
+Add classpath:	HikariCP-5.0.1.jar
+Add classpath:	spring-jdbc-6.0.9.jar
+Add classpath:	hibernate-core-6.2.2.Final.jar
+Add classpath:	jakarta.persistence-api-3.1.0.jar
+Add classpath:	jakarta.transaction-api-2.0.1.jar
+Add classpath:	jboss-logging-3.5.0.Final.jar
+Add classpath:	hibernate-commons-annotations-6.0.6.Final.jar
+Add classpath:	jandex-3.0.5.jar
+Add classpath:	classmate-1.5.1.jar
+Add classpath:	byte-buddy-1.12.18.jar
+Add classpath:	jakarta.xml.bind-api-4.0.0.jar
+Add classpath:	jakarta.activation-api-2.1.0.jar
+Add classpath:	jaxb-runtime-4.0.2.jar
+Add classpath:	jaxb-core-4.0.2.jar
+Add classpath:	angus-activation-2.0.0.jar
+Add classpath:	txw2-4.0.2.jar
+Add classpath:	istack-commons-runtime-4.1.1.jar
+Add classpath:	jakarta.inject-api-2.0.1.jar
+Add classpath:	antlr4-runtime-4.10.1.jar
+Add classpath:	spring-data-jpa-3.1.0.jar
+Add classpath:	spring-data-commons-3.1.0.jar
+Add classpath:	spring-orm-6.0.9.jar
+Add classpath:	spring-context-6.0.9.jar
+Add classpath:	spring-tx-6.0.9.jar
+Add classpath:	spring-beans-6.0.9.jar
+Add classpath:	spring-core-6.0.9.jar
+Add classpath:	spring-jcl-6.0.9.jar
+Add classpath:	jakarta.annotation-api-2.0.0.jar
+Add classpath:	slf4j-api-2.0.2.jar
+Add classpath:	spring-aspects-6.0.9.jar
+Add classpath:	spring-boot-starter-web-3.1.0.jar
+Add classpath:	spring-boot-starter-3.1.0.jar
+Add classpath:	spring-boot-3.1.0.jar
+Add classpath:	spring-boot-autoconfigure-3.1.0.jar
+Add classpath:	spring-boot-starter-logging-3.1.0.jar
+Add classpath:	logback-classic-1.4.7.jar
+Add classpath:	logback-core-1.4.7.jar
+Add classpath:	log4j-to-slf4j-2.20.0.jar
+Add classpath:	log4j-api-2.20.0.jar
+Add classpath:	jul-to-slf4j-2.0.7.jar
+Add classpath:	snakeyaml-1.33.jar
+Add classpath:	spring-boot-starter-json-3.1.0.jar
+Add classpath:	jackson-databind-2.15.0.jar
+Add classpath:	jackson-annotations-2.15.0.jar
+Add classpath:	jackson-core-2.15.0.jar
+Add classpath:	jackson-datatype-jdk8-2.15.0.jar
+Add classpath:	jackson-datatype-jsr310-2.15.0.jar
+Add classpath:	jackson-module-parameter-names-2.15.0.jar
+Add classpath:	spring-boot-starter-tomcat-3.1.0.jar
+Add classpath:	tomcat-embed-core-10.1.8.jar
+Add classpath:	tomcat-embed-el-10.1.8.jar
+Add classpath:	tomcat-embed-websocket-10.1.8.jar
+Add classpath:	spring-web-6.0.9.jar
+Add classpath:	micrometer-observation-1.10.7.jar
+Add classpath:	micrometer-commons-1.10.7.jar
+Add classpath:	spring-webmvc-6.0.9.jar
+Add classpath:	spring-expression-6.0.9.jar
+Add classpath:	postgresql-42.7.2.jar
+Add classpath:	checker-qual-3.42.0.jar
+Add classpath:	javafx-controls-21.0.5.jar
+Add classpath:	javafx-controls-21.0.5-win.jar
+Add classpath:	javafx-graphics-21.0.5.jar
+Add classpath:	javafx-graphics-21.0.5-win.jar
+Add classpath:	javafx-base-21.0.5.jar
+Add classpath:	javafx-base-21.0.5-win.jar
+Add classpath:	javafx-fxml-21.0.5.jar
+Add classpath:	javafx-fxml-21.0.5-win.jar
+Add classpath:	modelmapper-2.4.4.jar
+Launcher:	C:\Program Files\Java\jdk-17\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\37529\IdeaProjects\PBZ_Kursovoy\AirportApp.exe;spring-boot-starter-data-jpa-3.1.0.jar;spring-boot-starter-aop-3.1.0.jar;spring-aop-6.0.9.jar;aspectjweaver-1.9.19.jar;spring-boot-starter-jdbc-3.1.0.jar;HikariCP-5.0.1.jar;spring-jdbc-6.0.9.jar;hibernate-core-6.2.2.Final.jar;jakarta.persistence-api-3.1.0.jar;jakarta.transaction-api-2.0.1.jar;jboss-logging-3.5.0.Final.jar;hibernate-commons-annotations-6.0.6.Final.jar;jandex-3.0.5.jar;classmate-1.5.1.jar;byte-buddy-1.12.18.jar;jakarta.xml.bind-api-4.0.0.jar;jakarta.activation-api-2.1.0.jar;jaxb-runtime-4.0.2.jar;jaxb-core-4.0.2.jar;angus-activation-2.0.0.jar;txw2-4.0.2.jar;istack-commons-runtime-4.1.1.jar;jakarta.inject-api-2.0.1.jar;antlr4-runtime-4.10.1.jar;spring-data-jpa-3.1.0.jar;spring-data-commons-3.1.0.jar;spring-orm-6.0.9.jar;spring-context-6.0.9.jar;spring-tx-6.0.9.jar;spring-beans-6.0.9.jar;spring-core-6.0.9.jar;spring-jcl-6.0.9.jar;jakarta.annotation-api-2.0.0.jar;slf4j-api-2.0.2.jar;spring-aspects-6.0.9.jar;spring-boot-starter-web-3.1.0.jar;spring-boot-starter-3.1.0.jar;spring-boot-3.1.0.jar;spring-boot-autoconfigure-3.1.0.jar;spring-boot-starter-logging-3.1.0.jar;logback-classic-1.4.7.jar;logback-core-1.4.7.jar;log4j-to-slf4j-2.20.0.jar;log4j-api-2.20.0.jar;jul-to-slf4j-2.0.7.jar;snakeyaml-1.33.jar;spring-boot-starter-json-3.1.0.jar;jackson-databind-2.15.0.jar;jackson-annotations-2.15.0.jar;jackson-core-2.15.0.jar;jackson-datatype-jdk8-2.15.0.jar;jackson-datatype-jsr310-2.15.0.jar;jackson-module-parameter-names-2.15.0.jar;spring-boot-starter-tomcat-3.1.0.jar;tomcat-embed-core-10.1.8.jar;tomcat-embed-el-10.1.8.jar;tomcat-embed-websocket-10.1.8.jar;spring-web-6.0.9.jar;micrometer-observation-1.10.7.jar;micrometer-commons-1.10.7.jar;spring-webmvc-6.0.9.jar;spring-expression-6.0.9.jar;postgresql-42.7.2.jar;checker-qual-3.42.0.jar;javafx-controls-21.0.5.jar;javafx-controls-21.0.5-win.jar;javafx-graphics-21.0.5.jar;javafx-graphics-21.0.5-win.jar;javafx-base-21.0.5.jar;javafx-base-21.0.5-win.jar;javafx-fxml-21.0.5.jar;javafx-fxml-21.0.5-win.jar;modelmapper-2.4.4.jar" org.example.AppLauncher
+Args length:	2099/32768 chars
+Exit code:	0

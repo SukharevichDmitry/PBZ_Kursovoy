@@ -1,6 +1,7 @@
 package org.example;
 
 import javafx.application.Application;
+import javafx.scene.image.Image;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -22,8 +23,7 @@ public class AppLauncher extends Application {
 
     @Override
     public void start(javafx.stage.Stage primaryStage) throws Exception {
-        // Здесь можно инициализировать интерфейс JavaFX
-        // Например, загружаем FXML файл или создаем интерфейс вручную
+
         FxApplication fxApp = new FxApplication();
         fxApp.init(primaryStage);
     }

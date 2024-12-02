@@ -8,6 +8,8 @@ import org.example.exception.FlightNotFoundException;
 import org.example.exception.IncidentNotFoundException;
 import org.example.mapper.IncidentMapper;
 import org.example.repository.IncidentRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +18,6 @@ import java.util.stream.Collectors;
 
 @Service
 public class IncidentService {
-
     @Autowired
     private IncidentRepository incidentRepository;
 
@@ -35,10 +36,10 @@ public class IncidentService {
         return new IncidentResponseDTO(
                 incident.getId(),
                 incident.getIncidentDate(),
-                incident.getIncidentPlaceId(),
+                incident.getIncidentPlaceNum(),
                 incident.getDescription(),
-                incident.getPassengerId(),
-                incident.getStaffId(),
+                incident.getPassengerNum(),
+                incident.getStaffNum(),
                 incident.getMeasuresTaken()
         );
     }
@@ -50,6 +51,7 @@ public class IncidentService {
 
     public IncidentResponseDTO createIncident(IncidentRequestDTO incidentRequestDTO) {
 
+        System.out.println("Creating incident with DTO: {" + incidentRequestDTO + "}");
         Incident incident = incidentMapper.toEntity(incidentRequestDTO);
         incidentRepository.save(incident);
 
@@ -61,10 +63,10 @@ public class IncidentService {
                 .orElseThrow(() -> new IncidentNotFoundException(id));
 
         incident.setIncidentDate(incidentDetails.getIncidentDate());
-        incident.setIncidentPlaceId(incidentDetails.getIncidentPlaceId());
+        incident.setIncidentPlaceNum(incidentDetails.getIncidentPlaceNum());
         incident.setDescription(incidentDetails.getDescription());
-        incident.setPassengerId(incidentDetails.getPassengerId());
-        incident.setStaffId(incidentDetails.getStaffId());
+        incident.setPassengerNum(incidentDetails.getPassengerNum());
+        incident.setStaffNum(incidentDetails.getStaffNum());
         incident.setMeasuresTaken(incidentDetails.getMeasuresTaken());
 
         Incident updatedIncident = incidentRepository.save(incident);

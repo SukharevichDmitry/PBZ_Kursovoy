@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface IncidentRepository extends JpaRepository<Incident, Long> {
-    Optional<Incident> findByIncidentPlaceId(String incidentPlaceId);
+    Optional<Incident> findByIncidentPlaceNum(String incidentPlaceNum);
 }
